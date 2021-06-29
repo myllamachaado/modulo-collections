@@ -9,3 +9,5 @@ modulo/trabalhando/com/collections/ExemploList.java
  modulo.trabalhando.com.collections.ExemploList
 modulo/trabalhando/com/collections/MediaTemperatura.java
  modulo.trabalhando.com.collections.MediaTemperatura
+modulo/trabalhando/com/collections/QuestionarioCrime.java
+ modulo.trabalhando.com.collections.QuestionarioCrime
