@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class MediaTemperatura {
@@ -13,22 +14,19 @@ public class MediaTemperatura {
     public static void main(String[] args) throws IOException {
         List<Double> mediaTemperaturas = new ArrayList<>();
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String accStr;
 
         for(int i =0; i < 6; i++) {
             System.out.println("Insira a temperatura do mês 0" + (i+1) + ": ");
             String aux = br.readLine();
             mediaTemperaturas.add(Double.parseDouble(aux));
         }
-        System.out.println("Lista de temperaturas: " + mediaTemperaturas);
-        System.out.println("Asoma das temperaturas: " + somaMedias(mediaTemperaturas));
-        System.out.println("A média semestral das temperaturas: " + mediaDasMedias(mediaTemperaturas));
+        System.out.println("--------\n Lista de temperaturas: " + mediaTemperaturas);
+        System.out.println("--------\n A soma das temperaturas: " + somaMedias(mediaTemperaturas));
+        System.out.println("--------\n" + String.format("A média semestral das temperaturas: %.2f", mediaDasMedias(mediaTemperaturas)));
 
         Double media = mediaDasMedias(mediaTemperaturas);
-        System.out.println("Meses com a média maior que a média semestral: ");
-        System.out.println(zeraValoresAbaixoMedia(mediaTemperaturas, media));
-
-
+        System.out.println("--------\n Meses em que a temperatura média do mês é maior que a média semestral:");
+        exibeValorAcimaMediaSemestral(mediaTemperaturas, media);
     }
 
     public static Double somaMedias(List<Double> mediaTemperaturas){
@@ -43,13 +41,19 @@ public class MediaTemperatura {
         return somaMedias(mediaTemperaturas)/mediaTemperaturas.size();
     }
 
-    public static List<Double> zeraValoresAbaixoMedia(List<Double> mediaTemperaturas, Double media){
+    public static List<Double> exibeValorAcimaMediaSemestral(List<Double> mediaTemperaturas, Double media){
+        List<String> meses = Arrays.asList("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho");
         int i = 0;
-        for(Double linha: mediaTemperaturas){
-            if(linha < media){
-                mediaTemperaturas.set(i, 0.0);
+        boolean flag = false;
+        for(Double linha: mediaTemperaturas) {
+            if (linha > media) {
+                System.out.println((i + 1) + " - " + meses.get(i) + " ~ Temperatura: " + mediaTemperaturas.get(i));
+                flag = true;
             }
             i++;
+        }
+        if(flag = false){
+            System.out.println("Não existem meses com a temperatura acima da média semestral.");
         }
         return mediaTemperaturas;
     }
