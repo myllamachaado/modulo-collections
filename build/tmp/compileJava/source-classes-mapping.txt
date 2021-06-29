@@ -1,0 +1,11 @@
+modulo/trabalhando/com/collections/ExemploOrdenacaoList.java
+ modulo.trabalhando.com.collections.ComparatorCor
+ modulo.trabalhando.com.collections.ComparatorIdade
+ modulo.trabalhando.com.collections.ComparatorNomeCorIdade
+ modulo.trabalhando.com.collections.ExemploOrdenacaoList
+ modulo.trabalhando.com.collections.ExemploOrdenacaoList$1
+ modulo.trabalhando.com.collections.Gato
+modulo/trabalhando/com/collections/ExemploList.java
+ modulo.trabalhando.com.collections.ExemploList
+modulo/trabalhando/com/collections/MediaTemperatura.java
+ modulo.trabalhando.com.collections.MediaTemperatura
