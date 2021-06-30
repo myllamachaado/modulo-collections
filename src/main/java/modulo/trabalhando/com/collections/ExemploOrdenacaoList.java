@@ -49,7 +49,7 @@ public class ExemploOrdenacaoList {
         System.out.println("---------\nLista de gatos pela cor: " + meusGatos2);
 
         // 7 - Ordem nome/ cor /idade
-        Collections.sort(meusGatos2, new ComparatorCor());
+        Collections.sort(meusGatos2, new ComparatorNomeCorIdade());
         System.out.println("---------\nLista de gatos pela cor: " + meusGatos2);
 
     }
