@@ -10,21 +10,27 @@ modulo/trabalhando/com/collections/ExemploOrdenacaoList.java
  modulo.trabalhando.com.collections.ExemploOrdenacaoList
  modulo.trabalhando.com.collections.ExemploOrdenacaoList$1
  modulo.trabalhando.com.collections.Gato
+modulo/trabalhando/com/collections/EcercicioCoresArcoIris.java
+ modulo.trabalhando.com.collections.ExercicioCoresArcoIris
+ modulo.trabalhando.com.collections.ExercicioCoresArcoIris$1
+ modulo.trabalhando.com.collections.ExercicioCoresArcoIris$2
+ modulo.trabalhando.com.collections.ExercicioCoresArcoIris$3
 modulo/trabalhando/com/collections/ExemploList.java
  modulo.trabalhando.com.collections.ExemploList
 modulo/trabalhando/com/collections/MediaTemperatura.java
  modulo.trabalhando.com.collections.MediaTemperatura
+modulo/trabalhando/com/collections/CoresArcoIris.java
+ modulo.trabalhando.com.collections.ComparatorCores
+ modulo.trabalhando.com.collections.CoresArcoIris
 modulo/trabalhando/com/collections/Serie.java
  modulo.trabalhando.com.collections.ComparatorGenero
  modulo.trabalhando.com.collections.ComparatorNomeGeneroTempo
  modulo.trabalhando.com.collections.ComparatorTempo
  modulo.trabalhando.com.collections.Serie
-modulo/trabalhando/com/collections/ExemploSet.java
- modulo.trabalhando.com.collections.ExemploSet
 modulo/trabalhando/com/collections/QuestionarioCrime.java
  modulo.trabalhando.com.collections.QuestionarioCrime
-modulo/trabalhando/com/collections/ArcoIris.java
- modulo.trabalhando.com.collections.ArcoIris
-modulo/trabalhando/com/collections/CoresArcoIris.java
- modulo.trabalhando.com.collections.CoresArcoIris
- modulo.trabalhando.com.collections.CoresArcoIris$1
+modulo/trabalhando/com/collections/ExemploSet.java
+ modulo.trabalhando.com.collections.ExemploSet
+modulo/trabalhando/com/collections/ExemploMap.java
+ modulo.trabalhando.com.collections.ExemploMap
+ modulo.trabalhando.com.collections.ExemploMap$1

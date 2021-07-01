@@ -39,8 +39,8 @@ public class ExemploOrdenacaoSet {
             add(new Serie("that 70's show", "comedia", 25));
         }};
 
-        System.out.println("----------\nOrdem natural inserção: ");
-        imprimeTreeSet(seriesTreeSet);
+        System.out.println("----------\nOrdem natural inserção: " + seriesTreeSet);
+        //imprimeTreeSet(seriesTreeSet);
 
         System.out.println("----------\nOrdem por genero: ");
         TreeSet<Serie> seriesGenero = new TreeSet<>(new ComparatorGenero());
