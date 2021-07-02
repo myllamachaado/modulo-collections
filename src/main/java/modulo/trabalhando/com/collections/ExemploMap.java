@@ -60,10 +60,64 @@ public class ExemploMap {
         // Exiba a média dos consumos
         System.out.println("----------\nA média dos consumos é: " + retornaMediaConsumo(retornaSomaConsumo(carrosPopulares), carrosPopulares.size()));
 
+        // Remova os carros com consumo iguais a 15,6
+        removeCarro(carrosPopulares, 15.6);
+        System.out.println("----------\nRemova os carros com consumo igual a 15,6: ");
+        exibeTabelasCarros(carrosPopulares);
+
+        // Exiba os carros na ordem em que foram informados
+        LinkedHashMap<String, Double> carrosPopularesHashMap = new LinkedHashMap<>() {{
+            put("gol", 14.4);
+            put("uno", 15.6);
+            put("mobi", 16.1);
+            put("hb20", 14.5);
+            put("kwid", 15.6);
+        }};
+        System.out.println("----------\nDicinário de carros em ordem natural de inserção: ");
+        exibeTabelasCarrosLinkedHashMap(carrosPopularesHashMap);
+
+        // Exiba o dicionário ordenado pelo modelo
+        TreeMap<String, Double> carrosPopularesTreeMap = new TreeMap<>() {{
+            put("gol", 14.4);
+            put("uno", 15.6);
+            put("mobi", 16.1);
+            put("hb20", 14.5);
+            put("kwid", 15.6);
+        }};
+        System.out.println("----------\nDicinário de carros ordenado pelo modelo: ");
+        exibeTabelasCarrosTreeMap(carrosPopularesTreeMap);
+
+        // Apague o conjunto de carros
+        System.out.println("----------\nDicionários apagados: ");
+        carrosPopularesTreeMap.clear();
+        carrosPopularesHashMap.clear();
+        carrosPopulares.clear();
+        System.out.println("TreeMap: " + carrosPopularesTreeMap);
+        System.out.println("HashMap: " + carrosPopularesHashMap);
+        System.out.println("Map: " + carrosPopulares);
+
+        // Confira se os dicionários estão vazios
+        System.out.println("----------\nConfira se os dicionários estão apagados: ");
+        System.out.println("TreeMap está vazio? " + carrosPopularesTreeMap.isEmpty());
+        System.out.println("HashMap está vazio? " + carrosPopularesHashMap.isEmpty());
+        System.out.println("Map está vazio? " + carrosPopulares.isEmpty());
+
 
     }
 
     public static void exibeTabelasCarros(Map<String, Double> listaCarros){
+        for(String key: listaCarros.keySet()){
+            System.out.println("Modelo: " + key + " | Consumo: " + listaCarros.get(key));
+        }
+    }
+
+    public static void exibeTabelasCarrosLinkedHashMap(LinkedHashMap<String, Double> listaCarros){
+        for(String key: listaCarros.keySet()){
+            System.out.println("Modelo: " + key + " | Consumo: " + listaCarros.get(key));
+        }
+    }
+
+    public static void exibeTabelasCarrosTreeMap(TreeMap<String, Double> listaCarros){
         for(String key: listaCarros.keySet()){
             System.out.println("Modelo: " + key + " | Consumo: " + listaCarros.get(key));
         }
@@ -111,6 +165,15 @@ public class ExemploMap {
 
     public static Double retornaMediaConsumo(Double soma, int tam){
         return soma/tam;
+    }
+
+    public static void removeCarro(Map<String, Double> carrosPopulares, Double val){
+        Iterator<Double> iterator = carrosPopulares.values().iterator();
+        while(iterator.hasNext()){
+            if(iterator.next().equals(val)){
+                iterator.remove();
+            }
+        }
     }
 
 }
