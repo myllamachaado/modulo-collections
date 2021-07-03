@@ -50,6 +50,8 @@ public class ExemploOrdenacaoMap {
         System.out.println("----------\nLista inserida pela ordem do número de páginas dos livros: ");
         exibeTreeMapIterator(livroOrdemNumeroPaginas);
 
+        // Ordenar por número de páginas
+        compatarorLambda(listaLivrosTreeMap);
     }
 
     public static void exibeMap(Map<String, Livro> listaLivros){
@@ -75,6 +77,30 @@ public class ExemploOrdenacaoMap {
         while(iterator.hasNext()){
             System.out.println(iterator.next().toString());
         }
+    }
+
+    public static void compatarorReferenceMethod(TreeMap<String, Livro> listaLivros){
+        // Ordenar por número de páginas
+        Set<Map.Entry<String, Livro>> livroOrdemNumeroPaginas = new TreeSet<>(new Comparator<Map.Entry<String, Livro>>() {
+            @Override
+            public int compare(Map.Entry<String, Livro> l1, Map.Entry<String, Livro> l2) {
+                return Integer.compare(l1.getValue().getNumPaginas(), l2.getValue().getNumPaginas());
+            }
+        });
+
+        livroOrdemNumeroPaginas.addAll(listaLivros.entrySet());
+        System.out.println("----------\nLista inserida pela ordem do número de páginas dos livros usando Reference Method: ");
+        exibeTreeMapIterator(livroOrdemNumeroPaginas);
+    }
+
+    public static void compatarorLambda(TreeMap<String, Livro> listaLivros){
+        // Ordenar por número de páginas
+        Set<Map.Entry<String, Livro>> livroOrdemNumeroPaginas = new TreeSet<>(Comparator.comparing(
+                cont -> cont.getValue().getNumPaginas()));
+
+        livroOrdemNumeroPaginas.addAll(listaLivros.entrySet());
+        System.out.println("----------\nLista inserida pela ordem do número de páginas dos livros usando expressões lambda: ");
+        exibeTreeMapIterator(livroOrdemNumeroPaginas);
     }
 
 }

@@ -40,8 +40,13 @@ modulo/trabalhando/com/collections/Livro.java
  modulo.trabalhando.com.collections.ComparatorNome
  modulo.trabalhando.com.collections.ComparatorNumeroPaginas
  modulo.trabalhando.com.collections.Livro
+modulo/trabalhando/com/collections/MinhaClasse.java
+ modulo.trabalhando.com.collections.MinhaClasse
 modulo/trabalhando/com/collections/ExemploOrdenacaoMap.java
  modulo.trabalhando.com.collections.ExemploOrdenacaoMap
  modulo.trabalhando.com.collections.ExemploOrdenacaoMap$1
  modulo.trabalhando.com.collections.ExemploOrdenacaoMap$2
  modulo.trabalhando.com.collections.ExemploOrdenacaoMap$3
+ modulo.trabalhando.com.collections.ExemploOrdenacaoMap$4
+modulo/trabalhando/com/collections/ExemplosStreamAPI.java
+ modulo.trabalhando.com.collections.ExemplosStreamAPI
